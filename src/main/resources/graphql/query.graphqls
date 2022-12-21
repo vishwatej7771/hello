@@ -1,0 +1,33 @@
+type Query{
+
+hello:String
+findAll:[Employee]
+findBymobile(mobile:String):Employee
+findByid(id:ID):Employee
+checkData(city:String,mobile:String,address:String):Employee
+}
+
+type Employee{
+id:ID
+employeenamme:String
+city:String
+mobile:String
+address:String
+}
+
+type Mutation{
+
+saveEmp(addEmployeeInput:AddEmployeeInput):Employee
+
+}
+input AddEmployeeInput{
+employeenamme:String
+city:String
+mobile:String
+address:String
+}
+
+
+
+
+
